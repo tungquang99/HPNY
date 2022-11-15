@@ -1,4 +1,4 @@
-var count = new Date("Nov 15, 2022 14:58:00").getTime();
+var count = new Date("Nov 15, 2022 15:05:00").getTime();
 
 var x = setInterval(() => {
   var now = new Date().getTime();
