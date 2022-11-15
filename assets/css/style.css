@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.6em;
+  background: transparent;
+  color: #ffffff;
+  font-family: "Dancing Script", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+/*====== COUNT DOWN =========*/
+
+.container {
+  background: radial-gradient(ellipse at bottom, #e82219 10%, #33201a 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+.head {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.head_body {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.count {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.5rem;
+  max-width: 1024px;
+  width: 100%;
+  margin: 1rem auto 0;
+}
+
+.count_d {
+  position: relative;
+  width: 130px;
+  padding: 20px;
+  margin: 0 5px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  justify-self: center;
+}
+
+.count_d::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+}
+
+.count_d span {
+  display: block;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  padding: 0 10px 30px;
+}
+
+.count_d h2 {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.7rem;
+}
+
+img {
+  display: none;
+}
+
+/*====== IMAGE ======= */
+img.tet1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+img.tet2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+img.tet3 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+img.tet4 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/*====== TEXT TYPING =========*/
+#text {
+  color: yellow;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1.5rem 0.5rem;
+}
+
+.text__desc {
+  margin-top: 10px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: yellow;
+  margin-left: 0.1rem;
+  animation: blink 0.8s infinite;
+}
+
+.cursor.typing {
+  animation: none;
+}
+
+/* VIDEO COUNTDOWN 10s */
+.cd10s {
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #000;
+}
+
+
+@keyframes blink {
+  0% {
+    background-color: yellow;
+  }
+  49% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+/*====== MEDIA QUERY =========*/
+
+@media screen and (min-width: 425px) {
+  .count {
+    row-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .count {
+    grid-template-columns: repeat(4, 180px);
+    justify-content: center;
+  }
+
+  .count_d {
+    width: 150px;
+    padding: 30px;
+    border-radius: 3rem;
+  }
+
+  .count_d span {
+    font-size: 3rem;
+    padding: 0 10px 25px;
+  }
+
+  .count_d h2 {
+    font-size: 1rem;
+    bottom: 1rem;
+  }
+  #text {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 930px) {
+  img {
+    display: block;
+    max-width: 150px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1,
+  h2,
+  h3 {
+    margin-top: 1rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .head__text {
+    margin-top: 5rem;
+  }
+
+  .count {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .count_d {
+    width: 220px;
+    padding: 55px;
+    border-radius: 4.5rem;
+  }
+
+  .count_d span {
+    font-size: 3em;
+    padding: 0 10px 30px;
+  }
+
+  .count_d h2 {
+    font-size: 1.5rem;
+    bottom: 1.8rem;
+  }
+
+  #text {
+    font-size: 2.5rem;
+    margin: 5rem 0.5rem;
+  }
+
+  img {
+    display: block;
+    max-width: 230px;
+    width: 100%;
+  }
+}
