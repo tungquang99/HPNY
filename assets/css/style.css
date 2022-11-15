@@ -48,7 +48,8 @@ h3 {
 .head_body {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 5rem;
+  align-items: center;
 }
 
 
@@ -257,7 +258,12 @@ img.tet4 {
     font-size: 2rem;
   }
 
-  .head__text {
+  .head_body img {
+    max-width: 180px;
+    width: 100%;
+  }
+
+  .head__body {
     margin-top: 5rem;
   }
 
@@ -283,7 +289,7 @@ img.tet4 {
 
   #text {
     font-size: 2.5rem;
-    margin: 5rem 0.5rem;
+    margin: 3rem 0.5rem 5rem;
   }
 
   img {
