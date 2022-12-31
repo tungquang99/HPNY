@@ -132,7 +132,7 @@ h1 {
   position: absolute;
   top: 84%;
   left: 46%;
-  color: #000;
+  color: rgb(255, 255, 255);
   transform: translate(-50%, -50%);
 }
 
@@ -142,7 +142,7 @@ h1 {
   font-size: .5em;
   font-weight: 800;
   text-transform: uppercase;
-  color: #000;
+  color: #fff;
   position: absolute;
   left: 46%;
   transform: translateX(-50%);
