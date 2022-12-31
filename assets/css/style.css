@@ -69,13 +69,15 @@ h1 {
   margin: 1rem auto 0;
 }
 
+.count_down {
+  position: relative;
+}
+
 .count_d {
   position: relative;
   width: 130px;
   padding: 20px;
   margin: 0 5px;
-  background-color: #fff;
-  color: #000;
   border-radius: 2.5rem;
   overflow: hidden;
   justify-self: center;
@@ -85,32 +87,67 @@ h1 {
   content: "";
   position: absolute;
   width: 100%;
-  height: 35%;
-  background: rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  bottom: 0;
+  height: 100%;
+  background: rgba(75, 75, 75, 0.2);
+  z-index: 9;
+  top: 0;
   left: 0;
 }
 
-.count_d span {
-  display: block;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 800;
-  padding: 0 10px 30px;
+.count_down:nth-child(1) .count_d {
+  background: url('/assets/img/Asset_1.png');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
-.count_d h2 {
+.count_down:nth-child(2) .count_d {
+  background: url('/assets/img/Asset_2.png');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.count_down:nth-child(3) .count_d {
+  background: url('/assets/img/Asset_3.png');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.count_down:nth-child(4) .count_d {
+  background: url('/assets/img/Asset_4.png');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.time span {
   display: block;
   text-align: center;
-  font-size: 13px;
+  font-size: 1.5em;
+  font-weight: 800;
+  padding: 0 10px 30px;
+  z-index: 999;
+  position: absolute;
+  top: 84%;
+  left: 46%;
+  color: #000;
+  transform: translate(-50%, -50%);
+}
+
+.time h2 {
+  display: block;
+  text-align: center;
+  font-size: .5em;
   font-weight: 800;
   text-transform: uppercase;
   color: #000;
   position: absolute;
-  left: 50%;
+  left: 46%;
   transform: translateX(-50%);
   bottom: 0.7rem;
+  z-index: 999;
 }
 
 img {
@@ -273,18 +310,9 @@ img.tet4 {
 
   .count_d {
     width: 220px;
+    height: 220px;
     padding: 55px;
     border-radius: 4.5rem;
-  }
-
-  .count_d span {
-    font-size: 3em;
-    padding: 0 10px 30px;
-  }
-
-  .count_d h2 {
-    font-size: 1.5rem;
-    bottom: 1.8rem;
   }
 
   #text {

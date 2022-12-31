@@ -1,4 +1,4 @@
-var count = new Date("Jan 22, 2023 00:00:00").getTime();
+var count = new Date("Jan 1, 2023 00:00:00").getTime();
 
 var x = setInterval(() => {
   var now = new Date().getTime();
@@ -20,10 +20,10 @@ var x = setInterval(() => {
     document.getElementById("hour").innerHTML = "P";
     document.getElementById("minute").innerHTML = "N";
     document.getElementById("second").innerHTML = "Y";
-    //window.location = "phao_hoa/phao_hoa/index.html";
+    window.location = "phao_hoa/phao_hoa/index.html";
   }
-  if (seconds <= 38 && days == 0 && hour == 0 && minutes == 0) {
-    clearInterval(x);
-    window.location = "/video.html";
-  }
+  // if (seconds <= 38 && days == 0 && hour == 0 && minutes == 0) {
+  //   clearInterval(x);
+  //   window.location = "/video.html";
+  // }
 }, 1000);
